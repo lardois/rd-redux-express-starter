@@ -2,16 +2,15 @@
   "name": "rd-redux-express-starter",
   "version": "1.0.0",
   "description": "Starter pack w/ React, Redux, Express, Heroku",
-  "main": "server.js",
+  "main": "app.js",
+  "repository": "git@github.com:lardois/rd-redux-express-starter.git",
   "scripts": {
     "build": "webpack -p --config ./webpack.deployment.config.js --progress --colors",
     "dev-start": "node app.js",
-    "postinstall": "",
-    "start": "npm run build && NODE_ENV=production node app.js"
+    "start": "npm run build && NODE_ENV=production node app.js",
   },
   "author": "Lauri Heikkilä / Rytmi Development",
   "license": "ISC",
-  "private": true,
   "devDependencies": {
     "eslint": "^3.10.2",
     "eslint-config-airbnb": "^13.0.0",

@@ -9,13 +9,19 @@ module.exports = {
     filename: 'bundle.js',
   },
   module: {
-    loaders: [{
-      include: path.join(__dirname, 'src'),
-      loader: 'babel',
-      query: {
-        presets: ['react', 'latest'],
+    loaders: [
+      {
+        test: /\.jsx$/,
+        include: path.join(__dirname, 'src'),
+        loader: 'babel',
+        query: {
+          presets: ['react', 'latest'],
+        },
+      }, {
+        test: /\.css$/,
+        loader: 'style-loader!css-loader',
       },
-    }],
+    ],
   },
   resolve: {
     extensions: ['', '.js', '.jsx'],
